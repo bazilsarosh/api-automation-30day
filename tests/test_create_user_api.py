@@ -1,11 +1,9 @@
-from utils.api_client import post
-
-def test_create_user():
+def test_create_user(api):
     payload = {
         "name": "Bazil",
         "job": "QA Engineer"
     }
-    response = post("users", payload)
+    response = api.post("users", payload)
     assert response.status_code == 201
     data = response.json()
     assert data["name"] == "Bazil"
