@@ -1,3 +1,7 @@
+import pytest
+from utils.assertions import assert_has_keys
+
+@pytest.mark.smoke
 def test_create_user(api):
     payload = {
         "name": "Bazil",

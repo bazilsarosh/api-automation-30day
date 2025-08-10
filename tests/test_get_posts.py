@@ -1,3 +1,7 @@
+import pytest
+from utils.assertions import assert_has_keys
+
+@pytest.mark.smoke
 def test_get_posts(api):
     res = api.get("posts")
     assert res.status_code == 200

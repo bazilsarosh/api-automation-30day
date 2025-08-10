@@ -1,3 +1,4 @@
+import pytest
 from utils.schema_validator import assert_schema
 
 POST_SCHEMA = {
@@ -11,6 +12,7 @@ POST_SCHEMA = {
     "required": ["userId", "id", "title", "body"]
 }
 
+@pytest.mark.smoke
 def test_get_first_post(api):
     res = api.get("posts/1")
     assert res.status_code == 200

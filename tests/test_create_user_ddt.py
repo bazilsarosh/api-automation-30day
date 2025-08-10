@@ -1,5 +1,6 @@
 import pytest
 from utils.data_loader import load_json
+from utils.assertions import assert_has_keys
 
 # Reuse the 'api' fixture from your conftest.py
 testdata = load_json("tests/data/users.json")

@@ -1,3 +1,7 @@
+import pytest
+from utils.assertions import assert_has_keys
+
+@pytest.mark.smoke
 def test_get_user(api):
     response = api.get("users")
     assert response.status_code == 200
